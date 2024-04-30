@@ -1,3 +1,7 @@
+import Test1 from "./components/test1";
+import Test2React from "./components/test2/react";
+import Test2Vanilla from "./components/test2/vanilla";
+
 const routePaths = [
   "/",
   "/test1",
@@ -34,11 +38,11 @@ export const routes: Record<ROUTE_PATH, Route> = {
     key: "/test1",
     link: "/test1",
     name: "테스트1",
-    children: null,
+    children: Test1,
   },
   "/test2": {
     key: "/test2",
-    link: "/test2",
+    link: "/test2/vanilla",
     name: "테스트2",
     children: ["/test2/vanilla", "/test2/react"],
   },
@@ -46,13 +50,13 @@ export const routes: Record<ROUTE_PATH, Route> = {
     key: "/test2/vanilla",
     link: "/test2/vanilla",
     name: "바닐라",
-    children: null,
+    children: Test2Vanilla,
   },
   "/test2/react": {
     key: "/test2/react",
     link: "/test2/react",
     name: "리액트",
-    children: null,
+    children: Test2React,
   },
 };
 
